@@ -13,3 +13,7 @@ python-multipart==0.0.6
 pgvector==0.2.4
 numpy==1.25.2
 email-validator==2.1.0
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
