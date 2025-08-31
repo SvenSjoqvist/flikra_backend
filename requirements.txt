@@ -29,6 +29,9 @@ cachetools>=5.3.0
 scipy>=1.10.0
 pandas>=2.0.0
 
+# Email validation for Pydantic
+email-validator>=2.0.0
+
 # Vector Search and Similarity
 faiss-cpu>=1.7.4
 # faiss-gpu>=1.7.4  # Uncomment for GPU support
@@ -36,3 +39,7 @@ faiss-cpu>=1.7.4
 # Background Processing
 celery>=5.3.0
 flower>=2.0.0  # For monitoring Celery tasks
+
+# Production dependencies
+gunicorn>=21.0.0
+python-dotenv>=1.0.0
