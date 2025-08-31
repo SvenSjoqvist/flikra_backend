@@ -1,0 +1,224 @@
+{
+  "report_type": "performance",
+  "period": {
+    "start_date": "2025-07-01T00:00:00",
+    "end_date": "2025-08-03T00:00:00"
+  },
+  "total_products": 26,
+  "products": [
+    {
+      "product_id": "4cf25336-1bf3-434e-a19c-bf82312ad155",
+      "product_name": "Nike Meal 6",
+      "total_swipes": 9,
+      "likes": 4,
+      "dislikes": 5,
+      "conversion_rate": 44.44
+    },
+    {
+      "product_id": "827c6963-faff-4bcf-87ea-5fda9e3afa33",
+      "product_name": "Nike Pizza 22",
+      "total_swipes": 8,
+      "likes": 7,
+      "dislikes": 1,
+      "conversion_rate": 87.5
+    },
+    {
+      "product_id": "b649f15a-a1bb-4874-9179-dc27a7a5b855",
+      "product_name": "Nike Snack 3",
+      "total_swipes": 7,
+      "likes": 4,
+      "dislikes": 3,
+      "conversion_rate": 57.14
+    },
+    {
+      "product_id": "7918ae79-f149-41ea-8134-332ee9575bb8",
+      "product_name": "Nike Coffee 23",
+      "total_swipes": 7,
+      "likes": 4,
+      "dislikes": 3,
+      "conversion_rate": 57.14
+    },
+    {
+      "product_id": "13711af0-f681-4847-bb84-82d2d91be368",
+      "product_name": "Nike Meal 21",
+      "total_swipes": 6,
+      "likes": 5,
+      "dislikes": 1,
+      "conversion_rate": 83.33
+    },
+    {
+      "product_id": "7610a9de-93d2-4611-a660-b240f4a3e73c",
+      "product_name": "Nike Beverage 7",
+      "total_swipes": 6,
+      "likes": 2,
+      "dislikes": 4,
+      "conversion_rate": 33.33
+    },
+    {
+      "product_id": "ad75dcf0-209d-469d-bfde-ceec82120593",
+      "product_name": "Nike Smoothie 13",
+      "total_swipes": 6,
+      "likes": 4,
+      "dislikes": 2,
+      "conversion_rate": 66.67
+    },
+    {
+      "product_id": "9fa18e28-82a7-4cf3-b4af-685b446ee352",
+      "product_name": "Nike Dessert 1",
+      "total_swipes": 5,
+      "likes": 4,
+      "dislikes": 1,
+      "conversion_rate": 80.0
+    },
+    {
+      "product_id": "31d9664d-3e16-4029-b62c-db4579fb6368",
+      "product_name": "Nike Beverage 10",
+      "total_swipes": 5,
+      "likes": 3,
+      "dislikes": 2,
+      "conversion_rate": 60.0
+    },
+    {
+      "product_id": "12e3eb3f-9323-4645-8e34-73b982bf199c",
+      "product_name": "Nike Burger 24",
+      "total_swipes": 5,
+      "likes": 4,
+      "dislikes": 1,
+      "conversion_rate": 80.0
+    },
+    {
+      "product_id": "d3fd91e5-7af1-4861-89c9-1e3f4083d1f3",
+      "product_name": "Nike Pizza 19",
+      "total_swipes": 5,
+      "likes": 4,
+      "dislikes": 1,
+      "conversion_rate": 80.0
+    },
+    {
+      "product_id": "ae1519a6-495c-4ee9-9f9a-2803b5060503",
+      "product_name": "Nike Smoothie 18",
+      "total_swipes": 5,
+      "likes": 5,
+      "dislikes": 0,
+      "conversion_rate": 100.0
+    },
+    {
+      "product_id": "d2de7e3a-480d-4b88-bb50-62cc59670281",
+      "product_name": "Nike Pizza 9",
+      "total_swipes": 5,
+      "likes": 0,
+      "dislikes": 5,
+      "conversion_rate": 0.0
+    },
+    {
+      "product_id": "03d4f90a-e933-47d3-b688-303efec9fc97",
+      "product_name": "Nike Coffee 20",
+      "total_swipes": 5,
+      "likes": 3,
+      "dislikes": 2,
+      "conversion_rate": 60.0
+    },
+    {
+      "product_id": "d04da3d0-b4b6-4734-8d1f-8c64cd13bf53",
+      "product_name": "Nike Pizza 12",
+      "total_swipes": 4,
+      "likes": 1,
+      "dislikes": 3,
+      "conversion_rate": 25.0
+    },
+    {
+      "product_id": "9c663f15-7bd9-4e09-b920-5fb6071568d3",
+      "product_name": "Nike Beverage 5",
+      "total_swipes": 4,
+      "likes": 4,
+      "dislikes": 0,
+      "conversion_rate": 100.0
+    },
+    {
+      "product_id": "dbcf86dd-1f67-48f0-94c1-e05daff56f19",
+      "product_name": "Nike Dessert 8",
+      "total_swipes": 4,
+      "likes": 2,
+      "dislikes": 2,
+      "conversion_rate": 50.0
+    },
+    {
+      "product_id": "bf164614-dc8e-48db-8740-d325f8a5d1dc",
+      "product_name": "Nike Dessert 14",
+      "total_swipes": 4,
+      "likes": 3,
+      "dislikes": 1,
+      "conversion_rate": 75.0
+    },
+    {
+      "product_id": "9437831a-2bdb-46ae-8ed8-35c41ce13a68",
+      "product_name": "Nike Beverage 15",
+      "total_swipes": 4,
+      "likes": 3,
+      "dislikes": 1,
+      "conversion_rate": 75.0
+    },
+    {
+      "product_id": "1016587a-dd2c-42bf-8c52-624e36092b52",
+      "product_name": "Nike Smoothie 2",
+      "total_swipes": 3,
+      "likes": 1,
+      "dislikes": 2,
+      "conversion_rate": 33.33
+    },
+    {
+      "product_id": "1c10d277-c1e5-439a-aff7-15e44dd46f28",
+      "product_name": "Nike Dessert 25",
+      "total_swipes": 3,
+      "likes": 3,
+      "dislikes": 0,
+      "conversion_rate": 100.0
+    },
+    {
+      "product_id": "869ed06f-ddbc-4d3f-955f-b56a204f6dcc",
+      "product_name": "Nike Dessert 17",
+      "total_swipes": 2,
+      "likes": 1,
+      "dislikes": 1,
+      "conversion_rate": 50.0
+    },
+    {
+      "product_id": "28feb275-9061-42a4-9302-d4a0e0fd1d5c",
+      "product_name": "Nike Smoothie 26",
+      "total_swipes": 2,
+      "likes": 2,
+      "dislikes": 0,
+      "conversion_rate": 100.0
+    },
+    {
+      "product_id": "10622225-93dd-4f02-b350-3b255335bd52",
+      "product_name": "Nike Burger 11",
+      "total_swipes": 2,
+      "likes": 1,
+      "dislikes": 1,
+      "conversion_rate": 50.0
+    },
+    {
+      "product_id": "c4e42b77-0756-4c91-9dfe-7c5cdcfd5642",
+      "product_name": "Nike Coffee 16",
+      "total_swipes": 1,
+      "likes": 0,
+      "dislikes": 1,
+      "conversion_rate": 0.0
+    },
+    {
+      "product_id": "0bf12f4f-f050-43d5-a6a2-84dff2d97e15",
+      "product_name": "Nike Pizza 4",
+      "total_swipes": 1,
+      "likes": 1,
+      "dislikes": 0,
+      "conversion_rate": 100.0
+    }
+  ],
+  "summary": {
+    "total_swipes": 118,
+    "total_likes": 75,
+    "total_dislikes": 43,
+    "overall_conversion_rate": 63.56
+  }
+}

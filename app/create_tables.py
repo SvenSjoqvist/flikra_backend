@@ -1,70 +1,54 @@
-#!/usr/bin/env python3
-"""
-Script to create all database tables based on SQLAlchemy models.
-Run this once to set up your database schema.
-"""
+from sqlalchemy import text
+from app.db import engine, Base
+import logging
 
-from app.db import engine, Base, check_database_connection
-from app.models import (
-    User, Role, Brand, UserRole, Product, Swipe, 
-    WishlistItem, Referral, BrandAnalyticsEvent, ReferralClick
-)
+logger = logging.getLogger(__name__)
 
 def create_tables():
-    """Create all tables in the database."""
-    print("🚀 Creating database tables...")
-    
+    """Create all database tables with optimized indexes for recommendations"""
     try:
-        # Check database connection first
-        if not check_database_connection():
-            print("❌ Cannot connect to database. Please check your connection.")
-            return False
-        
-        # Create all tables
+        # Create tables
         Base.metadata.create_all(bind=engine)
-        print("✅ All tables created successfully!")
         
-        # Insert default roles
-        from sqlalchemy.orm import sessionmaker
-        SessionLocal = sessionmaker(bind=engine)
-        db = SessionLocal()
-        
-        try:
-            # Check if roles already exist
-            existing_roles = db.query(Role).count()
-            if existing_roles == 0:
-                print("📝 Creating default roles...")
-                default_roles = [
-                    Role(name="user"),
-                    Role(name="admin"), 
-                    Role(name="brand_owner"),
-                    Role(name="brand_team")
-                ]
-                
-                for role in default_roles:
-                    db.add(role)
-                
-                db.commit()
-                print("✅ Default roles created!")
-            else:
-                print("ℹ️  Roles already exist, skipping role creation.")
-                
-        except Exception as e:
-            print(f"⚠️  Error creating roles: {e}")
-            db.rollback()
-        finally:
-            db.close()
+        # OPTIMIZATION: Add performance indexes for recommendation queries
+        with engine.connect() as conn:
+            # Index for user swipes (most common query)
+            conn.execute(text("""
+                CREATE INDEX IF NOT EXISTS idx_swipes_user_action 
+                ON swipes (user_id, action, created_at DESC)
+            """))
             
-        return True
+            # Index for product category/brand filtering
+            conn.execute(text("""
+                CREATE INDEX IF NOT EXISTS idx_products_category_brand 
+                ON products (category, brand_id)
+            """))
+            
+            # Index for swipe joins
+            conn.execute(text("""
+                CREATE INDEX IF NOT EXISTS idx_swipes_product_join 
+                ON swipes (product_id, user_id, action)
+            """))
+            
+            # Partial index for products with vectors (PostgreSQL syntax)
+            conn.execute(text("""
+                CREATE INDEX IF NOT EXISTS idx_products_with_vectors 
+                ON products (id) WHERE combined_vector IS NOT NULL
+            """))
+            
+            # Composite index for recommendation queries
+            conn.execute(text("""
+                CREATE INDEX IF NOT EXISTS idx_recommendations_composite 
+                ON products (category, brand_id) WHERE combined_vector IS NOT NULL
+            """))
+            
+            conn.commit()
+        
+        logger.info("✅ Database tables and indexes created successfully")
         
     except Exception as e:
-        print(f"❌ Error creating tables: {e}")
-        return False
+        logger.error(f"❌ Failed to create tables: {e}")
+        raise
 
 if __name__ == "__main__":
-    success = create_tables()
-    if success:
-        print("\n🎉 Database setup complete!")
-        print("💡 You can now start your FastAPI server and use the API.")
-    else:
-        print("\n😞 Database setup failed. Please check the errors above.") 
+    create_tables() 

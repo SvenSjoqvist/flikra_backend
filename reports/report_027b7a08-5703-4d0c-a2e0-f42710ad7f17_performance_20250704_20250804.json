@@ -1,0 +1,120 @@
+{
+  "report_type": "performance",
+  "period": {
+    "start_date": "2025-07-04T00:00:00",
+    "end_date": "2025-08-04T00:00:00"
+  },
+  "total_products": 13,
+  "products": [
+    {
+      "product_id": "3634fe52-6eab-4cc2-be3c-b026fd98b32c",
+      "product_name": "Coca-Cola Sneakers 8",
+      "total_swipes": 10,
+      "likes": 8,
+      "dislikes": 2,
+      "conversion_rate": 80.0
+    },
+    {
+      "product_id": "17e92bd7-d72f-4899-80aa-76a29079106a",
+      "product_name": "Coca-Cola Sneakers 11",
+      "total_swipes": 8,
+      "likes": 4,
+      "dislikes": 4,
+      "conversion_rate": 50.0
+    },
+    {
+      "product_id": "a2bb3816-ca28-4d19-a19f-cd4142c89082",
+      "product_name": "Coca-Cola Dress 12",
+      "total_swipes": 7,
+      "likes": 4,
+      "dislikes": 3,
+      "conversion_rate": 57.14
+    },
+    {
+      "product_id": "0779a3ff-1545-41bd-aa31-22c12a427b5e",
+      "product_name": "Coca-Cola Hat 4",
+      "total_swipes": 6,
+      "likes": 5,
+      "dislikes": 1,
+      "conversion_rate": 83.33
+    },
+    {
+      "product_id": "3e4aa83e-f494-43d5-9683-72f6c7eb6fef",
+      "product_name": "Coca-Cola T-Shirt 9",
+      "total_swipes": 6,
+      "likes": 4,
+      "dislikes": 2,
+      "conversion_rate": 66.67
+    },
+    {
+      "product_id": "5884f405-5c9d-4831-8c1a-2377c8ea1bf5",
+      "product_name": "Coca-Cola Dress 13",
+      "total_swipes": 6,
+      "likes": 2,
+      "dislikes": 4,
+      "conversion_rate": 33.33
+    },
+    {
+      "product_id": "6d5080b4-8bf8-43d6-b40e-4fcbcce7c6b5",
+      "product_name": "Coca-Cola Hat 2",
+      "total_swipes": 6,
+      "likes": 4,
+      "dislikes": 2,
+      "conversion_rate": 66.67
+    },
+    {
+      "product_id": "4c9fd456-579e-4ba2-97dc-f2dcefff32ca",
+      "product_name": "Coca-Cola Dress 10",
+      "total_swipes": 5,
+      "likes": 2,
+      "dislikes": 3,
+      "conversion_rate": 40.0
+    },
+    {
+      "product_id": "6f931bf7-15e1-4f24-9903-d445143a963b",
+      "product_name": "Coca-Cola Dress 7",
+      "total_swipes": 4,
+      "likes": 3,
+      "dislikes": 1,
+      "conversion_rate": 75.0
+    },
+    {
+      "product_id": "8ca1666b-c38f-495b-bde2-9a8ec83dfa23",
+      "product_name": "Coca-Cola Sneakers 1",
+      "total_swipes": 4,
+      "likes": 3,
+      "dislikes": 1,
+      "conversion_rate": 75.0
+    },
+    {
+      "product_id": "c33aa19e-2512-4243-9f78-ff4f069e6269",
+      "product_name": "Coca-Cola Hat 6",
+      "total_swipes": 2,
+      "likes": 2,
+      "dislikes": 0,
+      "conversion_rate": 100.0
+    },
+    {
+      "product_id": "35387e25-f9f1-4aa1-8f07-7bb8e86bed51",
+      "product_name": "Coca-Cola Hat 5",
+      "total_swipes": 2,
+      "likes": 1,
+      "dislikes": 1,
+      "conversion_rate": 50.0
+    },
+    {
+      "product_id": "f7265b43-3b8e-4671-95ce-9c792905788e",
+      "product_name": "Coca-Cola Jeans 3",
+      "total_swipes": 1,
+      "likes": 1,
+      "dislikes": 0,
+      "conversion_rate": 100.0
+    }
+  ],
+  "summary": {
+    "total_swipes": 67,
+    "total_likes": 43,
+    "total_dislikes": 24,
+    "overall_conversion_rate": 64.18
+  }
+}

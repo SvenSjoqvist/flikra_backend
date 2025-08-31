@@ -3,8 +3,6 @@ from sqlalchemy.orm import Session
 from sqlalchemy import text, func, and_, or_
 from uuid import UUID
 from app.models import Product, Swipe
-from app.utils.vectorization import cosine_similarity
-import numpy as np
 
 class SearchService:
     """Advanced search service with multiple search strategies."""
@@ -43,52 +41,6 @@ class SearchService:
         
         return products
     
-    def vector_search(self, query_vector: List[float], limit: int = 20) -> List[Tuple[Product, float]]:
-        """Vector similarity search using CLIP embeddings."""
-        products_with_vectors = self.db.query(Product).filter(
-            Product.vector_id_combined != None
-        ).all()
-        
-        scored_products = []
-        for product in products_with_vectors:
-            if product.vector_id_combined:
-                similarity = cosine_similarity(query_vector, product.vector_id_combined)
-                scored_products.append((product, similarity))
-        
-        # Sort by similarity
-        scored_products.sort(key=lambda x: x[1], reverse=True)
-        return scored_products[:limit]
-    
-    def hybrid_search(self, text_query: str, query_vector: Optional[List[float]] = None, 
-                     limit: int = 20, vector_weight: float = 0.7) -> List[Tuple[Product, float]]:
-        """Combine text search with vector search."""
-        # Text search results
-        text_results = self.full_text_search(text_query, limit * 2)
-        
-        # Vector search results (if vector provided)
-        vector_results = []
-        if query_vector:
-            vector_results = self.vector_search(query_vector, limit * 2)
-        
-        # Combine and score
-        product_scores = {}
-        
-        # Add text search scores
-        for i, product in enumerate(text_results):
-            text_score = 1.0 - (i / len(text_results))  # Normalize by position
-            product_scores[product.id] = product_scores.get(product.id, 0) + (text_score * (1 - vector_weight))
-        
-        # Add vector search scores
-        for product, vector_score in vector_results:
-            product_scores[product.id] = product_scores.get(product.id, 0) + (vector_score * vector_weight)
-        
-        # Sort by combined score
-        scored_products = [(self.db.query(Product).filter(Product.id == pid).first(), score) 
-                          for pid, score in product_scores.items()]
-        scored_products.sort(key=lambda x: x[1], reverse=True)
-        
-        return scored_products[:limit]
-    
     def filtered_search(self, 
                        search_query: Optional[str] = None,
                        category: Optional[str] = None,
@@ -116,9 +68,9 @@ class SearchService:
             for tag in tags:
                 query = query.filter(Product.tags.any(tag))
         if min_price is not None:
-            query = query.filter(Product.product_metadata['price'].astext.cast(float) >= min_price)
+            query = query.filter(Product.price >= min_price)
         if max_price is not None:
-            query = query.filter(Product.product_metadata['price'].astext.cast(float) <= max_price)
+            query = query.filter(Product.price <= max_price)
         if exclude_swiped_by:
             swiped_ids = set(r[0] for r in self.db.query(Swipe.product_id).filter(Swipe.user_id == exclude_swiped_by).all())
             query = query.filter(~Product.id.in_(swiped_ids))

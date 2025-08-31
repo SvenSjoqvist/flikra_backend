@@ -1,0 +1,256 @@
+{
+  "report_type": "performance",
+  "period": {
+    "start_date": "2025-07-04T00:00:00",
+    "end_date": "2025-08-04T00:00:00"
+  },
+  "total_products": 30,
+  "products": [
+    {
+      "product_id": "f9d5d615-ca0e-4f05-9fca-b159cbf279bd",
+      "product_name": "Netflix Bike 15",
+      "total_swipes": 9,
+      "likes": 6,
+      "dislikes": 3,
+      "conversion_rate": 66.67
+    },
+    {
+      "product_id": "97166add-cc32-47d6-b239-5b2e1275088c",
+      "product_name": "Netflix Car 22",
+      "total_swipes": 8,
+      "likes": 5,
+      "dislikes": 3,
+      "conversion_rate": 62.5
+    },
+    {
+      "product_id": "2ad489df-232f-4077-b9c1-748f7f444386",
+      "product_name": "Netflix Car 30",
+      "total_swipes": 7,
+      "likes": 3,
+      "dislikes": 4,
+      "conversion_rate": 42.86
+    },
+    {
+      "product_id": "7060018b-3190-4465-bad5-5a5a72a5b12d",
+      "product_name": "Netflix Boat 10",
+      "total_swipes": 7,
+      "likes": 4,
+      "dislikes": 3,
+      "conversion_rate": 57.14
+    },
+    {
+      "product_id": "0f168960-509b-4128-80ce-b6318031f696",
+      "product_name": "Netflix Bus 29",
+      "total_swipes": 7,
+      "likes": 3,
+      "dislikes": 4,
+      "conversion_rate": 42.86
+    },
+    {
+      "product_id": "2abeb28f-0724-4cef-bffd-01c6b1d29f88",
+      "product_name": "Netflix Train 6",
+      "total_swipes": 6,
+      "likes": 4,
+      "dislikes": 1,
+      "conversion_rate": 66.67
+    },
+    {
+      "product_id": "be5c9612-7b7e-499c-b04f-9cabe1cd8238",
+      "product_name": "Netflix Boat 17",
+      "total_swipes": 6,
+      "likes": 3,
+      "dislikes": 3,
+      "conversion_rate": 50.0
+    },
+    {
+      "product_id": "435b9c56-8115-47f0-abae-3fee657e5cf0",
+      "product_name": "Netflix Train 28",
+      "total_swipes": 6,
+      "likes": 4,
+      "dislikes": 2,
+      "conversion_rate": 66.67
+    },
+    {
+      "product_id": "18be05c8-0f6b-49e8-bc01-f9e7325cb4ea",
+      "product_name": "Netflix Train 4",
+      "total_swipes": 6,
+      "likes": 1,
+      "dislikes": 4,
+      "conversion_rate": 16.67
+    },
+    {
+      "product_id": "73f1559e-1e36-4607-863b-54bb08723ca2",
+      "product_name": "Netflix Boat 5",
+      "total_swipes": 6,
+      "likes": 4,
+      "dislikes": 1,
+      "conversion_rate": 66.67
+    },
+    {
+      "product_id": "3a1b0417-b435-421b-8c4c-59da050bc4a8",
+      "product_name": "Netflix Car 16",
+      "total_swipes": 6,
+      "likes": 4,
+      "dislikes": 2,
+      "conversion_rate": 66.67
+    },
+    {
+      "product_id": "e4dde60c-2788-49a5-b45c-e3a6c7960c33",
+      "product_name": "Netflix Helicopter 14",
+      "total_swipes": 6,
+      "likes": 4,
+      "dislikes": 2,
+      "conversion_rate": 66.67
+    },
+    {
+      "product_id": "2d3f4a82-bcf2-4cf5-ba44-4768f3d764ab",
+      "product_name": "Netflix Train 23",
+      "total_swipes": 6,
+      "likes": 5,
+      "dislikes": 1,
+      "conversion_rate": 83.33
+    },
+    {
+      "product_id": "a1fdf15e-2050-40fc-b80d-56e6d223916f",
+      "product_name": "Netflix Boat 1",
+      "total_swipes": 5,
+      "likes": 3,
+      "dislikes": 1,
+      "conversion_rate": 60.0
+    },
+    {
+      "product_id": "d62f0131-c82e-4532-a46a-d884947438d5",
+      "product_name": "Netflix Car 8",
+      "total_swipes": 5,
+      "likes": 3,
+      "dislikes": 1,
+      "conversion_rate": 60.0
+    },
+    {
+      "product_id": "105d5c34-dec1-4e34-b246-9765257fc275",
+      "product_name": "Netflix Bus 13",
+      "total_swipes": 5,
+      "likes": 4,
+      "dislikes": 1,
+      "conversion_rate": 80.0
+    },
+    {
+      "product_id": "928e44e0-42ed-45cd-958f-1f029f580445",
+      "product_name": "Netflix Train 20",
+      "total_swipes": 5,
+      "likes": 2,
+      "dislikes": 3,
+      "conversion_rate": 40.0
+    },
+    {
+      "product_id": "a678377b-5d5c-4359-954a-d466ca50dd0d",
+      "product_name": "Netflix Bike 21",
+      "total_swipes": 5,
+      "likes": 1,
+      "dislikes": 4,
+      "conversion_rate": 20.0
+    },
+    {
+      "product_id": "08c068a9-defe-4ad8-9e02-c9c35a1dcb64",
+      "product_name": "Netflix Boat 9",
+      "total_swipes": 5,
+      "likes": 1,
+      "dislikes": 3,
+      "conversion_rate": 20.0
+    },
+    {
+      "product_id": "d94af231-7b4d-437b-b047-a19e95fd157f",
+      "product_name": "Netflix Bus 26",
+      "total_swipes": 4,
+      "likes": 3,
+      "dislikes": 1,
+      "conversion_rate": 75.0
+    },
+    {
+      "product_id": "dd267b69-6240-4050-a0d4-010bffacfe4e",
+      "product_name": "Netflix Car 19",
+      "total_swipes": 4,
+      "likes": 2,
+      "dislikes": 2,
+      "conversion_rate": 50.0
+    },
+    {
+      "product_id": "6dbe1c25-0be6-43d6-9010-46e0be687466",
+      "product_name": "Netflix Bike 3",
+      "total_swipes": 4,
+      "likes": 2,
+      "dislikes": 1,
+      "conversion_rate": 50.0
+    },
+    {
+      "product_id": "8b60adb4-fdd6-4a51-a8e7-481ebe30bbe6",
+      "product_name": "Netflix Bike 7",
+      "total_swipes": 4,
+      "likes": 2,
+      "dislikes": 1,
+      "conversion_rate": 50.0
+    },
+    {
+      "product_id": "717a3070-0970-47a4-a416-7bf94208ac67",
+      "product_name": "Netflix Bike 25",
+      "total_swipes": 4,
+      "likes": 1,
+      "dislikes": 3,
+      "conversion_rate": 25.0
+    },
+    {
+      "product_id": "87e1d882-c917-4ba3-8717-5b05d65c3805",
+      "product_name": "Netflix Plane 12",
+      "total_swipes": 4,
+      "likes": 1,
+      "dislikes": 3,
+      "conversion_rate": 25.0
+    },
+    {
+      "product_id": "644d8d13-bd0b-4115-96f9-1234a9b16720",
+      "product_name": "Netflix Car 27",
+      "total_swipes": 4,
+      "likes": 3,
+      "dislikes": 1,
+      "conversion_rate": 75.0
+    },
+    {
+      "product_id": "0bf54059-dcee-4bec-8177-b86a3fdf2e19",
+      "product_name": "Netflix Scooter 2",
+      "total_swipes": 3,
+      "likes": 1,
+      "dislikes": 1,
+      "conversion_rate": 33.33
+    },
+    {
+      "product_id": "ccffa49e-bf5b-4b8b-81e0-bcf9564b4ddb",
+      "product_name": "Netflix Scooter 11",
+      "total_swipes": 3,
+      "likes": 2,
+      "dislikes": 1,
+      "conversion_rate": 66.67
+    },
+    {
+      "product_id": "285ad38b-8dee-40d6-9293-6fe6c8c399d1",
+      "product_name": "Netflix Boat 18",
+      "total_swipes": 2,
+      "likes": 1,
+      "dislikes": 1,
+      "conversion_rate": 50.0
+    },
+    {
+      "product_id": "e6abc105-7fe7-4cc3-85cf-c47aa195a084",
+      "product_name": "Netflix Plane 24",
+      "total_swipes": 2,
+      "likes": 1,
+      "dislikes": 1,
+      "conversion_rate": 50.0
+    }
+  ],
+  "summary": {
+    "total_swipes": 154,
+    "total_likes": 83,
+    "total_dislikes": 62,
+    "overall_conversion_rate": 53.9
+  }
+}

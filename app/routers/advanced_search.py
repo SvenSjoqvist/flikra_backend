@@ -153,16 +153,16 @@ def get_trending_products(
     trending_products = db.query(Product).join(
         db.query(Swipe.product_id, func.count(Swipe.id).label('recent_swipes'))
         .filter(
-            Swipe.direction == "right",
-            Swipe.timestamp >= threshold_date
+            Swipe.action == "right",
+            Swipe.created_at >= threshold_date
         )
         .group_by(Swipe.product_id)
         .subquery()
     ).order_by(
         db.query(Swipe.product_id, func.count(Swipe.id).label('recent_swipes'))
         .filter(
-            Swipe.direction == "right",
-            Swipe.timestamp >= threshold_date
+            Swipe.action == "right",
+            Swipe.created_at >= threshold_date
         )
         .group_by(Swipe.product_id)
         .subquery().c.recent_swipes.desc()
@@ -182,7 +182,7 @@ def get_discovery_products(
     # Get user's preferred categories and brands
     user_swipes = db.query(Swipe).filter(
         Swipe.user_id == user_id,
-        Swipe.direction == "right"
+        Swipe.action == "right"
     ).join(Product).all()
     
     if not user_swipes:

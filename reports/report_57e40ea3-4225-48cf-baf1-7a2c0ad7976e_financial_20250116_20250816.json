@@ -1,0 +1,15 @@
+{
+  "report_type": "financial",
+  "period": {
+    "start_date": "2025-01-16T00:00:00",
+    "end_date": "2025-08-16T00:00:00"
+  },
+  "metrics": {
+    "total_swipes": 79,
+    "conversions": 43,
+    "conversion_rate": 54.43,
+    "unique_customers": 64,
+    "avg_conversion_value": 25.0,
+    "estimated_revenue": 1075.0
+  }
+}

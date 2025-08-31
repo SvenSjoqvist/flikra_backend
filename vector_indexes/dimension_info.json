@@ -1,0 +1,11 @@
+{
+  "dimensions": [
+    512,
+    384
+  ],
+  "total_products": 419,
+  "dimension_counts": {
+    "512": 417,
+    "384": 2
+  }
+}

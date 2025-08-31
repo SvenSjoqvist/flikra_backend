@@ -1,5 +1,5 @@
 import uuid
-from sqlalchemy import Column, String, Integer, Float, Text, ForeignKey, ARRAY, JSON, DateTime
+from sqlalchemy import Column, String, Integer, Float, Text, ForeignKey, ARRAY, JSON, DateTime, Boolean, Numeric
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
 from app.db import Base
@@ -9,20 +9,24 @@ class Product(Base):
     __tablename__ = "products"
     
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    name = Column(String, nullable=False)
-    description = Column(Text)
-    image_url = Column(Text)
-    item_url = Column(Text)
-    color = Column(String)
-    category = Column(String)
-    gender = Column(String)
-    tags = Column(ARRAY(Text))
-    product_metadata = Column(JSON)  # Use JSON instead of JSONB
     brand_id = Column(UUID(as_uuid=True), ForeignKey('brands.id'))
-    swipe_right_count = Column(Integer, default=0)
-    swipe_left_count = Column(Integer, default=0)
-    vector_id_combined = Column(ARRAY(Float))  # New field for combined vector representation
+    name = Column(Text, nullable=False)
+    description = Column(Text)
+    price = Column(Numeric)
+    image = Column(Text)
+    category = Column(Text)
+    color = Column(Text, nullable=True, comment='Product color')
+    tags = Column(ARRAY(Text), nullable=True, comment='Product tags')
+    status = Column(Text)
+    flagged = Column(Boolean, default=False)
     created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, onupdate=datetime.utcnow)
+    
+    # Vector fields for similarity search
+    image_vector = Column(ARRAY(Float), nullable=True, comment='CLIP image embedding vector')
+    text_vector = Column(ARRAY(Float), nullable=True, comment='Text embedding vector')
+    combined_vector = Column(ARRAY(Float), nullable=True, comment='Combined image+text vector')
+    vector_metadata = Column(Text, nullable=True, comment='JSON metadata about vectors')
     
     # Relationships
     brand = relationship("Brand", back_populates="products")

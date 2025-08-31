@@ -18,7 +18,7 @@ class UserRole(Base):
     user = relationship("User", foreign_keys=[user_id], back_populates="user_roles")
     role = relationship("Role", back_populates="user_roles")
     brand = relationship("Brand", back_populates="user_roles")
-    assigner = relationship("User", foreign_keys=[assigned_by])
+    assigned_by_user = relationship("User", foreign_keys=[assigned_by], back_populates="assigned_roles")
     
     __table_args__ = (
         UniqueConstraint('user_id', 'role_id', 'brand_id', name='_user_role_brand_uc'),

@@ -1,5 +1,5 @@
 import uuid
-from sqlalchemy import Column, Text, ForeignKey, DateTime, CheckConstraint
+from sqlalchemy import Column, Text, ForeignKey, DateTime
 from sqlalchemy.dialects.postgresql import UUID, JSONB
 from sqlalchemy.orm import relationship
 from app.db import Base
@@ -12,8 +12,7 @@ class BrandAnalyticsEvent(Base):
     brand_id = Column(UUID(as_uuid=True), ForeignKey("brands.id"))
     product_id = Column(UUID(as_uuid=True), ForeignKey("products.id"))
     user_id = Column(UUID(as_uuid=True), ForeignKey("users.id"))
-    event_type = Column(Text, CheckConstraint("event_type IN ('view_brand','view_product','swipe_right','swipe_left','wishlist_save','click_link')"))
-    event_metadata = Column(JSONB)  # Changed from 'metadata' to 'event_metadata'
+    event_type = Column(Text)
     ip_address = Column(Text)
     country = Column(Text)
     city = Column(Text)

@@ -6,12 +6,12 @@ from typing import Optional
 class SwipeBase(BaseModel):
     user_id: UUID
     product_id: UUID
-    direction: str
+    action: str
 
-    @validator('direction')
-    def validate_direction(cls, v):
+    @validator('action')
+    def validate_action(cls, v):
         if v not in ['left', 'right']:
-            raise ValueError('direction must be either "left" or "right"')
+            raise ValueError('Action must be either "left" or "right"')
         return v
 
 class SwipeCreate(SwipeBase):
@@ -19,7 +19,7 @@ class SwipeCreate(SwipeBase):
 
 class Swipe(SwipeBase):
     id: UUID
-    timestamp: datetime
+    created_at: datetime
 
     class Config:
         from_attributes = True 
